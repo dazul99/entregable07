@@ -15,6 +15,7 @@ public class Entregable07 : MonoBehaviour
 
     private string palabra = "esternocleidomastoidal";
     private bool encontrar = false;
+    private string resul = "";
 
     void Start()
     {
@@ -83,11 +84,16 @@ public class Entregable07 : MonoBehaviour
     {
         for (int i=0; i<palabra.Length && !encontrar; i++)
         {
-            Debug.Log(palabra[i]);
             if (palabra[i] == 'a')
             {
                 encontrar = true;
             }
+            else
+            {
+                resul += palabra[i];
+            }
+
         }
+        Debug.Log(resul);
     }
 }
